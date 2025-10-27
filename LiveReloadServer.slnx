@@ -1,0 +1,25 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Documents/">
+    <File Path="build-chocolatey.ps1" />
+    <File Path="build-exe.ps1" />
+    <File Path="build-hosted.ps1" />
+    <File Path="Changelog.md" />
+    <File Path="Chocolatey/LiveReloadWebServer.template.nuspec" />
+    <File Path="create-release.ps1" />
+    <File Path="LICENSE.MD" />
+    <File Path="publish-nuget.ps1" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Changelog.md" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="LiveReloadServer/LiveReloadServer.csproj">
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+</Solution>
