@@ -18,12 +18,17 @@ if (test-path './build/SelfContained' -PathType Container) { remove-item ./build
 
 # Make sure hosted project gets built (in default project output folder)
 dotnet publish -c Release /p:PublishSingleFile=false /p:PublishTrimmed=false -o ./build/SelfContained
+
 copy-Item ./build/SelfContained/LiveReloadServer.exe ./build/SelfContained/LiveReloadWebServer.exe
 Remove-Item ./build/SelfContained/LiveReloadServer.exe
 
 # Sign exe
-.\signtool.exe sign /v /n "West Wind Technologies"   /tr "http://timestamp.digicert.com" /td SHA256 /fd SHA256 ".\build\SelfContained\LiveReloadWebServer.exe"
-.\signtool.exe sign /v /n "West Wind Technologies"   /tr "http://timestamp.digicert.com" /td SHA256 /fd SHA256 ".\build\SelfContained\LiveReloadServer.dll"
+# .\signtool.exe sign /v /n "West Wind Technologies"   /tr "http://timestamp.digicert.com" /td SHA256 /fd SHA256 ".\build\SelfContained\LiveReloadWebServer.exe"
+# .\signtool.exe sign /v /n "West Wind Technologies"   /tr "http://timestamp.digicert.com" /td SHA256 /fd SHA256 ".\build\SelfContained\LiveReloadServer.dll"
+
+
+.\signfile -file ".\build\Hosted\LiveReloadWebServer.exe" `
+           -file2 ".\build\Hosted\LiveReloadServer.dll"
 
 remove-item ".\LiveReloadWebServer-SelfContained.zip"
 7z a -tzip -r ".\LiveReloadWebServer-SelfContained.zip" "./build/SelfContained/*.*"

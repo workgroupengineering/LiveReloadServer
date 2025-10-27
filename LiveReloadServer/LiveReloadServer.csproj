@@ -11,9 +11,9 @@
 		<Platforms>AnyCPU</Platforms>
 	</PropertyGroup>
 	<PropertyGroup>
-		<Version>1.7.9.1</Version>
+		<Version>2.0.0-preview-1</Version>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<RazorCompileOnPublish>false</RazorCompileOnPublish>
 		<Title>Live Reload Server</Title>
 		<AssemblyTitle>Live Reload Server</AssemblyTitle>
@@ -63,12 +63,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+		<!--<FrameworkReference Include="Microsoft.AspNetCore.App" />-->
 		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.24.0" />
 		<PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.5.2" />
 		<PackageReference Include="Westwind.Utilities" Version="5.1.17" />
 		<PackageReference Include="Westwind.Utilities.Data" Version="5.1.16" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="9.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="10.0.0-rc.2.25502.107" />
 		<PackageReference Include="NuGet.Protocol" Version="6.14.0" />
 		<PackageReference Include="NuGet.Packaging" Version="6.14.0" />
 	</ItemGroup>

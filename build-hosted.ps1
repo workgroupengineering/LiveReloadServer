@@ -18,8 +18,11 @@ copy-Item ./build/Hosted/LiveReloadServer.exe ./build/Hosted/LiveReloadWebServer
 remove-item ./build/Hosted/LiveReloadServer.exe
 
 # Sign exe
-.\signtool.exe sign /v /n "West Wind Technologies"   /tr "http://timestamp.digicert.com" /td SHA256 /fd SHA256 ".\build\Hosted\LiveReloadWebServer.exe"
-.\signtool.exe sign /v /n "West Wind Technologies"   /tr "http://timestamp.digicert.com" /td SHA256 /fd SHA256 ".\build\Hosted\LiveReloadWebServer.dll"
+# .\signtool.exe sign /v /n "West Wind Technologies"   /tr "http://timestamp.digicert.com" /td SHA256 /fd SHA256 ".\build\Hosted\LiveReloadWebServer.exe"
+# .\signtool.exe sign /v /n "West Wind Technologies"   /tr "http://timestamp.digicert.com" /td SHA256 /fd SHA256 ".\build\Hosted\LiveReloadWebServer.dll"
+
+.\signfile -file ".\build\Hosted\LiveReloadWebServer.exe" `
+           -file2 ".\build\Hosted\LiveReloadServer.dll"
 
 del  ".\LiveReloadServer-Hosted.zip"
 7z a -tzip -r ".\LiveReloadServer-Hosted.zip" "./build/Hosted/*.*"

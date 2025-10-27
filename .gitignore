@@ -6,6 +6,7 @@
 # App Specific
 LiveReloadWebServer.exe
 LiveReloadWebServer.json
+SignFileMetadata.json
 
 build/
 
