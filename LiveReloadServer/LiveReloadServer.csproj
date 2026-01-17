@@ -11,7 +11,7 @@
 		<Platforms>AnyCPU</Platforms>
 	</PropertyGroup>
 	<PropertyGroup>
-		<Version>2.0.0-preview-1</Version>
+		<Version>2.0.1</Version>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net10.0</TargetFramework>
 		<RazorCompileOnPublish>false</RazorCompileOnPublish>
@@ -21,7 +21,7 @@
 		<Product>Live Reload Server</Product>
 		<Authors>Rick Strahl</Authors>
 		<Company>West Wind Technolologies</Company>
-		<Copyright>© Rick Strahl - West Wind Technologies, 2019-2025</Copyright>
+		<Copyright>© Rick Strahl - West Wind Technologies, 2019-2026</Copyright>
 		<Summary>A self-contained, local, cross-platform, static file Web Server with automatic Live Reloading, Markdown rendering and loose Razor Pages support.</Summary>
 		<Description>
 			A self-contained, local, cross-platform, static file Web Server with automatic Live Reloading, Markdown rendering and loose Razor Pages support.
@@ -64,13 +64,13 @@
 
 	<ItemGroup>
 		<!--<FrameworkReference Include="Microsoft.AspNetCore.App" />-->
-		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.24.0" />
-		<PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.5.2" />
-		<PackageReference Include="Westwind.Utilities" Version="5.1.17" />
-		<PackageReference Include="Westwind.Utilities.Data" Version="5.1.16" />
+		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.31.0" />
+		<PackageReference Include="Westwind.AspNetCore.LiveReload" Version="0.6.0" />
+		<PackageReference Include="Westwind.Utilities" Version="5.2.7" />
+		<PackageReference Include="Westwind.Utilities.Data" Version="5.2.7" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="10.0.0-rc.2.25502.107" />
-		<PackageReference Include="NuGet.Protocol" Version="6.14.0" />
-		<PackageReference Include="NuGet.Packaging" Version="6.14.0" />
+		<PackageReference Include="NuGet.Protocol" Version="7.0.1" />
+		<PackageReference Include="NuGet.Packaging" Version="7.0.1" />
 	</ItemGroup>
 
 	<ItemGroup Condition="$(DefineConstants.Contains('USE_RAZORPAGES'))">
